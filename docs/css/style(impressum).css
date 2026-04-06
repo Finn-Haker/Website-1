@@ -4,11 +4,13 @@ body {
   padding-bottom: 100px; 
 }
 
+/* defines navbar */
 .topnav {
   overflow: hidden;
   background-color: #D7C9B8;
 }
 
+/* links in the navbar */
 .topnav a {
   float: left;
   display: block;
@@ -19,20 +21,24 @@ body {
   font-size: 17px;
 }
 
+/* if you hover over a button in the navbar */
 .topnav a:hover {
   background-color: #B7A996;
   color: black;
 }
 
+/* to see on what site you are */
 .topnav a.active {
   background-color: #ad9f8b;
   color: black;
 }
 
+/* icon of the navbar */
 .topnav .icon {
   display: none;
 }
 
+/* defines navbar on a screen < 600px */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -41,6 +47,7 @@ body {
   }
 }
 
+/* defines navbar on a screen > 600px */
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -55,6 +62,7 @@ body {
   }
 }
 
+/* defines navbar */
 .footer {
   display: block;
   position: fixed;
@@ -68,21 +76,26 @@ body {
   z-index: 99;
 }
 
+/* links in the navbar */
 .footer a {
   color: #f2f2f2;
   text-decoration: none;
   margin: 0 0px;
 }
 
+/* if you hover over a button in the footer */
 .footer a:hover {
   color: #04AA6D;
   text-decoration: underline;
 }
 
+/* text in the footer */
 .footer p {
   margin: 0;
   padding: 0px;
 }
+
+/* defines last text in navbar */
 .footer p:last-child {
   margin-top: 0;
   line-height: 1.5;
