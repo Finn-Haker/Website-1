@@ -6,13 +6,13 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #D7C9B8;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -20,13 +20,13 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #B7A996;
   color: black;
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #ad9f8b;
+  color: black;
 }
 
 .topnav .icon {
