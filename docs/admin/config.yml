@@ -1,27 +1,19 @@
-backend:
-  name: github
-  repo: Finn-Haker/Website-1
-  branch: main
-
-media_folder: "docs/images"
-public_folder: "/images"
-
 collections:
   - name: "pages"
     label: "Seiten"
     files:
-      - file: "docs/index.html"
+      - file: "../index.html"                  # geht eine Ebene hoch zu docs/
         label: "Startseite"
         name: "home"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
-      - file: "docs/impressum/impressum.html"
+      - file: "../impressum/impressum.html"
         label: "Impressum"
         name: "impressum"
         fields:
           - { label: "Text", name: "body", widget: "markdown" }
-      - file: "docs/datenschutz/datenschutz.html"
+      - file: "../datenschutz/datenschutz.html"
         label: "Datenschutz"
         name: "datenschutz"
         fields:
