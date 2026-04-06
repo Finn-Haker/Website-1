@@ -81,9 +81,9 @@ body {
 
 .footer p {
   margin: 0;
-  padding: 5px;
+  padding: 0px;
 }
 .footer p:last-child {
   margin-top: 0;
-    line-height: 1.5;
+ /* line-height: 1.5;*/
 }
