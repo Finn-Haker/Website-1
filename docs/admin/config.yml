@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: finn-haker/Website-1
+  repo: Finn-Haker/Website-1
   branch: main
 
 media_folder: "docs/images"
