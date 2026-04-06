@@ -1,9 +1,9 @@
 backend:
   name: github
-  repo: finn-haker/Website-1  # Repository-Name ändern
-  branch: main  # Branch für Änderungen
+  repo: DEIN_GITHUB_USERNAME/Website-1
+  branch: main
 
-media_folder: "docs/images"  # Ordner für Bilder
+media_folder: "docs/images"
 public_folder: "/images"
 
 collections:
@@ -13,9 +13,16 @@ collections:
       - file: "docs/index.html"
         label: "Startseite"
         name: "home"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
       - file: "docs/datenschutz/datenschutz.html"
         label: "Datenschutz"
         name: "datenschutz"
+        fields:
+          - { label: "Text", name: "body", widget: "markdown" }
       - file: "docs/impressum/impressum.html"
         label: "Impressum"
         name: "impressum"
+        fields:
+          - { label: "Text", name: "body", widget: "markdown" }
