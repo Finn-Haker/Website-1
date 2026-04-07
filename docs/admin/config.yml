@@ -5,27 +5,24 @@ backend:
 media_folder: "images"
 public_folder: "/images"
 
-media_library:
-  name: uploadcare
-
 collections:
   - name: "pages"
     label: "Seiten"
     files:
-      - file: "../index.html"
+      - file: "index.html"
         label: "Startseite"
         name: "home"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
 
-      - file: "../impressum/impressum.html"
+      - file: "impressum/impressum.html"
         label: "Impressum"
         name: "impressum"
         fields:
           - { label: "Text", name: "body", widget: "markdown" }
 
-      - file: "../datenschutz/datenschutz.html"
+      - file: "datenschutz/datenschutz.html"
         label: "Datenschutz"
         name: "datenschutz"
         fields:
