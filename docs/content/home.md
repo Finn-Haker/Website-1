@@ -1,7 +1,5 @@
 ---
-title: Willkommen
+title: Willkommen auf meiner Webseite
 ---
 
-# Willkommen auf meiner Webseite
-
-Das ist meine Startseite 🙂
+Hier steht der Text der Startseite.

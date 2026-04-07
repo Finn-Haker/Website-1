@@ -1,3 +1,13 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "docs/images"
+public_folder: "/images"
+
+media_library:
+  name: uploadcare
+
 collections:
   - name: "pages"
     label: "Seiten"
@@ -7,22 +17,19 @@ collections:
         name: "home"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Inhalt", name: "body", widget: "markdown" }
+          - { label: "Text", name: "body", widget: "markdown" }
 
       - file: "docs/content/impressum.md"
         label: "Impressum"
         name: "impressum"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Inhalt", name: "body", widget: "markdown" }
+          - { label: "Text", name: "body", widget: "markdown" }
 
       - file: "docs/content/datenschutz.md"
         label: "Datenschutz"
         name: "datenschutz"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Inhalt", name: "body", widget: "markdown" }
-
+          - { label: "Text", name: "body", widget: "markdown" }
 # backend:
 #  name: git-gateway
 #  branch: main
