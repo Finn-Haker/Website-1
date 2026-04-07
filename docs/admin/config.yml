@@ -1,29 +1,53 @@
-backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "images"
-public_folder: "/images"
-
 collections:
   - name: "pages"
     label: "Seiten"
     files:
-      - file: "index.html"
+      - file: "docs/content/home.md"
         label: "Startseite"
         name: "home"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Text", name: "body", widget: "markdown" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
 
-      - file: "impressum/impressum.html"
+      - file: "docs/content/impressum.md"
         label: "Impressum"
         name: "impressum"
         fields:
-          - { label: "Text", name: "body", widget: "markdown" }
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
 
-      - file: "datenschutz/datenschutz.html"
+      - file: "docs/content/datenschutz.md"
         label: "Datenschutz"
         name: "datenschutz"
         fields:
-          - { label: "Text", name: "body", widget: "markdown" }
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+# backend:
+#  name: git-gateway
+#  branch: main
+#
+#media_folder: "images"
+#public_folder: "/images"
+#
+#collections:
+#  - name: "pages"
+#    label: "Seiten"
+#    files:
+#      - file: "index.html"
+#        label: "Startseite"
+#        name: "home"
+#        fields:
+#          - { label: "Titel", name: "title", widget: "string" }
+#          - { label: "Text", name: "body", widget: "markdown" 
+#      - file: "impressum/impressum.html"
+#        label: "Impressum"
+#        name: "impressum"
+#        fields:
+#          - { label: "Text", name: "body", widget: "markdown" }
+#
+#      - file: "datenschutz/datenschutz.html"
+#        label: "Datenschutz"
+#        name: "datenschutz"
+#        fields:
+#          - { label: "Text", name: "body", widget: "markdown" }
