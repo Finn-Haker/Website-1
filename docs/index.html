@@ -36,15 +36,15 @@ body: Willkommen auf meiner Website!
 
   <script src="script.js"></script>
   
-  <script>
-(function () {
-  const page = document.documentElement.innerHTML;
+<script>
+window.addEventListener("DOMContentLoaded", function () {
 
-  // Prüfen ob Frontmatter existiert
-  if (!page.startsWith('---')) return;
+  const html = document.documentElement.innerHTML;
 
-  // Frontmatter herausziehen
-  const match = page.match(/---([\s\S]*?)---/);
+  // Nur ausführen wenn CMS Frontmatter existiert
+  if (!html.startsWith('---')) return;
+
+  const match = html.match(/---([\s\S]*?)---/);
   if (!match) return;
 
   const frontmatter = match[1];
@@ -52,24 +52,22 @@ body: Willkommen auf meiner Website!
   const titleMatch = frontmatter.match(/title:\s*(.*)/);
   const bodyMatch = frontmatter.match(/body:\s*([\s\S]*)/);
 
-  // Titel setzen (optional)
+  // Titel setzen
   if (titleMatch) {
     document.title = titleMatch[1];
   }
 
-  // 👉 HIER wird dein vorhandener Content-Div gefüllt
-  if (bodyMatch) {
-    const contentDiv = document.getElementById("content");
-    if (contentDiv) {
-      contentDiv.innerText = bodyMatch[1].trim();
-    }
+  // Inhalt in DEINEN Content Div schreiben
+  const contentDiv = document.getElementById("content");
+  if (contentDiv && bodyMatch) {
+    contentDiv.innerText = bodyMatch[1].trim();
   }
 
-  // Frontmatter aus dem sichtbaren HTML entfernen
+  // CMS Block aus der Seite entfernen
   document.documentElement.innerHTML =
     document.documentElement.innerHTML.replace(/---[\s\S]*?---/, '');
 
-})();
+});
 </script>
 <footer >
   <div class="footer">
