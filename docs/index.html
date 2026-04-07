@@ -36,6 +36,41 @@ body: Willkommen auf meiner Website!
 
   <script src="script.js"></script>
   
+  <script>
+(function () {
+  const page = document.documentElement.innerHTML;
+
+  // Prüfen ob Frontmatter existiert
+  if (!page.startsWith('---')) return;
+
+  // Frontmatter herausziehen
+  const match = page.match(/---([\s\S]*?)---/);
+  if (!match) return;
+
+  const frontmatter = match[1];
+
+  const titleMatch = frontmatter.match(/title:\s*(.*)/);
+  const bodyMatch = frontmatter.match(/body:\s*([\s\S]*)/);
+
+  // Titel setzen (optional)
+  if (titleMatch) {
+    document.title = titleMatch[1];
+  }
+
+  // 👉 HIER wird dein vorhandener Content-Div gefüllt
+  if (bodyMatch) {
+    const contentDiv = document.getElementById("content");
+    if (contentDiv) {
+      contentDiv.innerText = bodyMatch[1].trim();
+    }
+  }
+
+  // Frontmatter aus dem sichtbaren HTML entfernen
+  document.documentElement.innerHTML =
+    document.documentElement.innerHTML.replace(/---[\s\S]*?---/, '');
+
+})();
+</script>
 <footer >
   <div class="footer">
     <p>&copy; 2026 Dein Blog Name. Alle Rechte vorbehalten.</p> <br>
